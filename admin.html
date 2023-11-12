@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yurinat</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/general.css">
+    <script defer src="dist/main.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
+</head>
+<body>
+<form class="auth-modal__form">
+    <section class="auth-modal__input-container">
+        <div class="auth-modal__input-data">
+            <input type="text" required class="auth-modal__input" id="login" name="login">
+            <div class="auth-modal__underline"></div>
+            <label for="login" class="auth-modal__label">Логин</label>
+        </div>
+        <div class="auth-modal__input-data">
+            <input type="password" required class="auth-modal__input" id="password" name="password">
+            <div class="auth-modal__underline"></div>
+            <label for="password" class="auth-modal__label">Пароль</label>
+        </div>
+    </section>
+
+    <button class="auth-modal__send btn">Войти</button>
+</form>
+</body>
+</html>

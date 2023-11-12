@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/calc.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/general.css">
+    <script src="dist/main.js" defer></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest" crossorigin="use-credentials">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <section class="header__container">
+                <a href="index.html" class="header__logo-link"><img src="img/icons/logo.svg" alt="logo" class="header__logo"></a>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="index.html" class="header__nav-link">О компании</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="calc.html" class="header__nav-link">Калькулятор</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="news.html" class="header__nav-link">Новости</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#contacts" class="header__nav-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <section class="header__btn-container">
+                    <a href="calc.html"><button class="header__service-btn btn">Заказать услугу</button></a>
+                    <button class="header__partner-btn btn partner-btn">Стать партнером</button>
+                </section>
+            </section>
+        </header>
+
+        <main class="main">
+            <div class="calc">
+                <section class="calc__title-container">
+                    <h1 class="calc__title title">КАЛЬКУЛЯТОР</h1>
+                </section>
+
+                <div class="calc__container" id="calcContainer">
+                    <section class="calc__tabs">
+                        <div class="calc__tab selected calc__tab_request">
+                            <p class="calc__tab-text">ЗАКАЗ ТОВАРА</p>
+                        </div>
+
+                        <div class="calc__tab calc__tab_trans">
+                            <p class="calc__tab-text">ТРАНСПОРТИРОВКА ТОВАРА</p>
+                        </div>
+                    </section>
+
+<!--                    <div class="request-modal">-->
+<!--                        <section class="request-modal__header">-->
+<!--                            <p class="request-modal__title">Куда доставить?</p>-->
+<!--                            <p class="request-modal__title">Что вы заказываете?</p>-->
+<!--                        </section>-->
+
+<!--                        <form class="request-modal__form">-->
+<!--                            <section class="request-modal__input-container">-->
+<!--                                <div class="request-modal__input-data request-modal__input-data_radio">-->
+<!--                                    <section class="request-modal__radio-container">-->
+<!--                                        <div class="request-modal__radio">-->
+<!--                                            <input class="request-modal__input_radio" id="radio-1" type="radio" name="country" value="Russia" checked>-->
+<!--                                            <label for="radio-1">Россия</label>-->
+<!--                                        </div>-->
+
+<!--                                        <div class="request-modal__radio">-->
+<!--                                            <input class="request-modal__input_radio" id="radio-2" type="radio" name="country" value="Latvia">-->
+<!--                                            <label for="radio-2">Латвия</label>-->
+<!--                                        </div>-->
+<!--                                    </section>-->
+<!--                                    <p class="request-modal__label request-modal__label_radio">Страна</p>-->
+<!--                                </div>-->
+<!--                                <div class="request-modal__input-data">-->
+<!--                                    <label for="goods-type" class="request-modal__label-input">-->
+<!--                                        <select name="type" id="goods-type" class="request-modal__select">-->
+<!--                                            <option value="" selected disabled>Тип товара</option>-->
+<!--                                            <option value="grocery">Бакалея</option>-->
+<!--                                            <option value="confectionery">Кондитерская продукция</option>-->
+<!--                                            <option value="frozen">Замороженные / Охлажденные товары</option>-->
+<!--                                            <option value="non-food">Непродовольственная продукция</option>-->
+<!--                                        </select>-->
+<!--                                        <div class="request-modal__underline"></div>-->
+<!--                                    </label>-->
+<!--                                </div>-->
+<!--                                <div class="request-modal__input-data">-->
+<!--                                    <input type="text" required class="request-modal__input" id="address">-->
+<!--                                    <div class="request-modal__underline"></div>-->
+<!--                                    <label for="address" class="request-modal__label">Адрес</label>-->
+<!--                                </div>-->
+<!--                                <div class="request-modal__input-data">-->
+<!--                                    <input type="text" required class="request-modal__input" id="amount">-->
+<!--                                    <div class="request-modal__underline"></div>-->
+<!--                                    <label for="amount" class="request-modal__label">Количество</label>-->
+<!--                                </div>-->
+<!--                                <div class="request-modal__input-data">-->
+<!--                                    <input type="number" required class="request-modal__input" id="index">-->
+<!--                                    <div class="request-modal__underline"></div>-->
+<!--                                    <label for="index" class="request-modal__label">Индекс</label>-->
+<!--                                </div>-->
+<!--                                <div class="request-modal__input-data request-modal__input-data_textarea">-->
+<!--                                    <textarea class="request-modal__textarea" required id="comment"></textarea>-->
+<!--                                    <div class="request-modal__underline"></div>-->
+<!--                                    <label for="comment" class="request-modal__label">Комментарий</label>-->
+<!--                                </div>-->
+<!--                            </section>-->
+
+<!--                            <section class="request-modal__button-container">-->
+<!--                                <button class="request-modal__cancel">Отмена</button>-->
+<!--                                <button class="request-modal__confirm">Добавить</button>-->
+<!--                            </section>-->
+<!--                        </form>-->
+<!--                    </div>-->
+
+<!--                    <div class="calc__strip-container">-->
+<!--                        <section class="calc__strip">-->
+<!--                            <p class="calc__strip-type">ТИП ТОВАРА</p>-->
+<!--                            <p class="calc__strip-amount">XX ШТ.</p>-->
+<!--                        </section>-->
+<!--                        <svg class="calc__delete-strip" xmlns="http://www.w3.org/2000/svg" width="22" height="28" viewBox="0 0 22 28" fill="none">-->
+<!--                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.83333 25.7778C1.83333 26.7143 3.20833 28 4.125 28H17.875C18.7917 28 20.1667 26.7143 20.1667 25.7778V8H1.83333V25.7778ZM22 2.93H17.1111L14.6667 0H7.33333L4.88889 2.93H0V5.86H22V2.93Z" fill="#4BB82F"/>-->
+<!--                        </svg>-->
+<!--                    </div>-->
+
+<!--                    <div class="calc__final-buttons">-->
+<!--                        <button class="calc__calc-button">Рассчитать стоимость</button>-->
+<!--                        <button class="calc__add-button">+   Добавить товар</button>-->
+<!--                    </div>-->
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__header"></div>
+
+            <section class="footer__info">
+                <div class="footer__cities-container">
+
+                    <a name="contacts"></a>
+
+                    <section class="footer__city">
+                        <p class="footer__title">Калининград</p>
+                        <p class="footer__text">236000, ул. Ялтинская, 44 <br>
+                            тел.: +74012575577 <br>
+                            факс: +74012575588 <br>
+                            info@yurinat.ru</p>
+                    </section>
+
+                    <section class="footer__city">
+                        <p class="footer__title">Москва</p>
+                        <p class="footer__text">127006, <br>
+                            Воротниковский пер 8с1 8 <br>
+                            info@yurinat.ru <br>
+                            тел.: +7 (495) 9682426</p>
+                    </section>
+
+                    <section class="footer__city">
+                        <p class="footer__title">Рига</p>
+                        <p class="footer__text">Riga, Neretas iela 2/1-107 <br>
+                            LV-1004 <br>
+                            yurinat.baltic@yurinat.com <br>
+                            тел.:+37120003139</p>
+                    </section>
+                </div>
+
+                <div class="footer__job-apply">
+                    <p class="footer__text footer__text_job">Если Вы хотите работать в нашей команде, присылайте резюме по адресу: <br>
+                        staff@yurinat.ru <br>
+                        Тел.: (4012) 57-55-90, 57-55-91</p>
+                </div>
+
+                <div class="footer__buttons-container">
+                    <div class="footer__main-buttons">
+                        <a href="index.html"><img src="img/icons/logo.svg" alt="logo" class="footer__logo"></a>
+                        <a href="calc.html"><button class="header__service-btn btn">Заказать услугу</button></a>
+                        <button class="footer__partner-btn btn partner-btn">Стать партнером</button>
+                    </div>
+
+                    <a target="_blank" href="https://cloud.mail.ru/public/EyAm/pGXnw9Dro"><button class="footer__download-btn">Скачать анкету</button></a>
+                </div>
+            </section>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "scripts": {
+    "build": "webpack --mode=production",
+    "watch": "webpack --watch --mode=development",
+    "server": "json-server --watch db/db.json --port=4545"
+  }
+}
