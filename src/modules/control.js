@@ -813,7 +813,7 @@ export class Control {
         cancel.addEventListener('click', e => {
             e.preventDefault();
             search.value = '';
-            admin.renderCards();
+            admin.renderNews();
         })
     }
 

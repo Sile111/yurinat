@@ -2,20 +2,23 @@ export class DbRequest {
     //dadadata: a99129afd66b1617593dbf2633745565b9c18f54
     //2gis: 40fe5f24-615a-4fbc-8607-544388a48264
 
-    link = 'http://localhost:4545'
+    link = 'http://localhost:4545';
+
+    linkDbOne = 'https://my-json-server.typicode.com/Sile111/yurinat-server'
+    linkDbTwo = 'https://my-json-server.typicode.com/Sile111/yurinat-server2'
     getNews = async () => {
-        return fetch(`${this.link}/news`).then(res => res.json());
+        return  fetch(`${this.linkDbTwo}/news`).then(res => res.json());
     }
     getNewItem = async (id) => {
-        return fetch(`${this.link}/news/${id}`).then(res => res.json());
+        return fetch(`${this.linkDbTwo}/news/${id}`).then(res => res.json());
     }
     deleteNews = async (id) => {
-        fetch(`${this.link}/news/${id}`, {
+        fetch(`${this.linkDbTwo}/news/${id}`, {
             method: 'DELETE'
         });
     }
     addNews = async (item, method, link) => {
-        fetch(`${this.link}/${link}`, {
+        fetch(`${this.linkDbTwo}/${link}`, {
             method: method,
             headers: {
                 "Content-Type": "application/json",
@@ -33,7 +36,7 @@ export class DbRequest {
 
 
     getCost = async () => {
-        return fetch(`${this.link}/metaData`).then(res => res.json());
+        return fetch(`${this.linkDbTwo}/metaData`).then(res => res.json());
     }
 
     getDistance = async (latFrom, lonFrom, latTo, lonTo) => {
@@ -41,11 +44,11 @@ export class DbRequest {
     }
 
     getRequests = async (service) => {
-        return fetch(`${this.link}/${service}Applications`).then(res => res.json());
+        return fetch(`${this.linkDbOne}/${service}Applications`).then(res => res.json());
     }
 
     addRequest = async (request, serviceType, insert, delStrips = 'no', itemsArr = '') => {
-        fetch(`${this.link}/${serviceType}Applications`, {
+        fetch(`${this.linkDbOne}/${serviceType}Applications`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",
@@ -156,7 +159,7 @@ export class DbRequest {
     }
 
     editRequest = async (item, serviceType, id) => {
-        fetch(`${this.link}/${serviceType}Applications/${id}`, {
+        fetch(`${this.linkDbOne}/${serviceType}Applications/${id}`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
@@ -172,7 +175,7 @@ export class DbRequest {
     }
 
     deleteRequest = async (serviceType, id) => {
-        fetch(`${this.link}/${serviceType}Applications/${id}`, {
+        fetch(`${this.linkDbOne}/${serviceType}Applications/${id}`, {
             method: 'DELETE',
             // headers: {
             //     "Content-Type": "application/json",
@@ -182,10 +185,10 @@ export class DbRequest {
     }
 
     getPrice = async () => {
-        return fetch(`${this.link}/metaData`).then(res => res.json());
+        return fetch(`${this.linkDbTwo}/metaData`).then(res => res.json());
     }
     setPrice = async (item) => {
-        fetch(`${this.link}/metaData/1`, {
+        fetch(`${this.linkDbTwo}/metaData/1`, {
             method: 'PATCH',
             headers: {
                 "Content-Type": "application/json",
@@ -196,19 +199,19 @@ export class DbRequest {
 
     getAdmins = async (id = 'no') => {
         if (id === 'no') {
-            return fetch(`${this.link}/admins`).then(res => res.json());
+            return fetch(`${this.linkDbOne}/admins`).then(res => res.json());
         } else {
-            return fetch(`${this.link}/admins/${id}`).then(res => res.json());
+            return fetch(`${this.linkDbOne}/admins/${id}`).then(res => res.json());
         }
     }
 
     deleteAdmins = async (id) => {
-        fetch(`${this.link}/admins/${id}`, {
+        fetch(`${this.linkDbOne}/admins/${id}`, {
             method: 'DELETE'
         });
     }
     addAdmins = async (item, method, link) => {
-        fetch(`${this.link}/${link}`, {
+        fetch(`${this.linkDbOne}/${link}`, {
             method: method,
             headers: {
                 "Content-Type": "application/json",
