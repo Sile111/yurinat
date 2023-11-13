@@ -7,5 +7,6 @@
     "build": "webpack --mode=production",
     "watch": "webpack --watch --mode=development",
     "server": "json-server --watch db/db.json --port=4545"
-  }
+  },
+  "homepage": "http://Sile111.github.io/yurinat"
 }
