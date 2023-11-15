@@ -147,7 +147,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 905px;
+    width: 774px;
     transition: all 0.1s ease-in;
 }
 .final-request__arrow {
@@ -348,4 +348,438 @@
 }
 .phone-call__submit {
     margin-bottom: 40px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .calc__title-container {
+        margin-top: 50px;
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .calc__tabs {
+        width: 668px;
+    }
+    .calc__tab {
+        width: 320px;
+    }
+    .calc__tab:hover {
+        background: rgb(219, 255, 209);
+    }
+    .calc__tab.selected {
+        background: rgba(75, 184, 47, 0.55);
+        color: #FFFFFF;
+    }
+
+    .calc__strip-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 668px;
+        margin-top: 25px;
+    }
+
+    .calc__strip {
+        width: 610px;
+        height: 60px;
+    }
+    .calc__strip:hover {
+        width: 654px;
+        margin-left: 20px;
+    }
+    .calc__strip-type {
+        margin-left: 22px;
+    }
+    .calc__strip-amount {
+        margin-right: 22px;
+    }
+    .calc__delete-strip {
+        margin-right: 15px;
+        transition: all 0.1s ease-in;
+        cursor: pointer;
+        background: url("../img/icons/delete.svg");
+        width: 22px;
+        height: 28px;
+        border: none;
+    }
+    .calc__delete-strip:hover {
+        scale: 1.2;
+    }
+
+    .calc__final-buttons {
+        width: 668px;
+    }
+    .calc__calc-button, .calc__add-button {
+        font-size: 20px;
+    }
+    .calc__calc-button {
+        width: 223px;
+        background: rgba(37, 96, 22, 0.77);
+    }
+    .calc__calc-button:hover {
+        background: rgb(37, 96, 22);
+    }
+    .calc__add-button {
+        width: 197px;
+        background: rgba(75, 184, 47, 0.55);
+    }
+    .calc__add-button:hover {
+        background: rgba(75, 184, 47, 0.8);
+    }
+
+    .final-request {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-request__slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 668px;
+        transition: all 0.1s ease-in;
+    }
+
+    .final-request__slide-container {
+        width: 668px;
+    }
+    .final-request__slide-header {
+        width: 610px;
+        margin-top: 25px;
+        font-size: 18px;
+    }
+    .final-request__slide-content {
+        width: 610px;
+        margin-top: 39px;
+    }
+    .final-request__slide-text {
+        width: 300px;
+        font-size: 15px;
+        margin-bottom: 61px;
+    }
+    .final-request__slide-text_comment {
+        width: 610px;
+    }
+    .final-request__slide-text::before {
+        content: url("../img/icons/modal-dot.svg");
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        left: -19px;
+    }
+
+    .final-request__bottom {
+        width: 668px;
+        height: 151px;
+        margin-top: 30px;
+    }
+    .final-request__warning {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 610px;
+        margin-top: 25px;
+    }
+    .final-request__price {
+        color: #256016;
+        font-size: 18px;
+    }
+    .final-request__price-warning {
+        color: #256016;
+        font-size: 13px;
+    }
+    .final-request__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 610px;
+        margin-top: 12px;
+    }
+    .final-request__call-button, .final-request__cancel-button {
+        color: #FFF;
+        font-size: 15px;
+        height: 41px;
+    }
+    .final-request__call-button {
+        width: 216px;
+        background: rgba(75, 184, 47, 0.55);
+    }
+    .final-request__cancel-button {
+        background: rgba(37, 96, 22, 0.77);
+        width: 133px;
+    }
+    .final-request__call-button:hover {
+        background: rgba(75, 184, 47, 0.8);
+    }
+    .final-request__cancel-button:hover {
+        background: rgb(37, 96, 22);
+    }
+
+    .blur {
+        filter: blur(3px);
+    }
+
+    .phone-call {
+        width: 501px;
+        border-radius: 10px;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone-call__header {
+        display: flex;
+        justify-content: space-between;
+        width: 463px;
+        align-items: center;
+        margin-top: 11px;
+    }
+    .phone-call__title {
+        color: #4BB82F;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 75px;
+    }
+    .phone-call__close {
+        border: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: none;
+        width: 40px;
+        height: 40px;
+        transition: all 0.1s ease-in;
+        cursor: pointer;
+    }
+    .phone-call__close:hover {
+        scale: 1.1;
+    }
+    .phone-call__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 307px;
+        margin-top: 40px;
+    }
+    .phone-call__submit {
+        margin-bottom: 40px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+    .calc__tabs {
+        width: 320px;
+        flex-direction: column;
+    }
+    .calc__tab {
+        width: 320px;
+        margin-bottom: 15px;
+    }
+    .calc__tab:hover {
+        background: rgb(219, 255, 209);
+    }
+    .calc__tab.selected {
+        background: rgba(75, 184, 47, 0.55);
+        color: #FFFFFF;
+    }
+
+    .calc__strip-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 320px;
+        margin-top: 25px;
+    }
+
+    .calc__strip {
+        width: 280px;
+        height: 90px;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .calc__strip:hover {
+        width: 280px;
+        margin-left: 0px;
+    }
+    .calc__strip-type {
+        text-align: center;
+        margin-top: 3px;
+    }
+    .calc__strip-amount {
+        margin-right: 0px;
+        text-align: center;
+        margin-bottom: 3px;
+    }
+    .calc__delete-strip {
+        margin-right: 5px;
+        width: 22px;
+        height: 28px;
+    }
+    .calc__delete-strip:hover {
+        scale: 1.2;
+    }
+
+    .calc__final-buttons {
+        width: 320px;
+    }
+    .calc__calc-button, .calc__add-button {
+        font-size: 14px;
+    }
+    .calc__calc-button {
+        width: 150px;
+        background: rgba(37, 96, 22, 0.77);
+    }
+    .calc__calc-button:hover {
+        background: rgb(37, 96, 22);
+    }
+    .calc__add-button {
+        width: 140px;
+        background: rgba(75, 184, 47, 0.55);
+    }
+    .calc__add-button:hover {
+        background: rgba(75, 184, 47, 0.8);
+    }
+
+    .final-request {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .final-request__slider {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 320px;
+        transition: all 0.1s ease-in;
+    }
+
+    .final-request__slide-container {
+        width: 320px;
+    }
+    .final-request__slide-header {
+        width: 300px;
+        margin-top: 25px;
+        font-size: 15px;
+    }
+    .final-request__slide-content {
+        width: 300px;
+        margin-top: 39px;
+    }
+    .final-request__slide-text {
+        width: 300px;
+        font-size: 15px;
+        margin-bottom: 61px;
+    }
+    .final-request__slide-text::before {
+        display: none;
+    }
+    .final-request__slide-text_comment {
+        width: 300px;
+    }
+
+    .final-request__bottom {
+        width: 320px;
+        height: 151px;
+        margin-top: 30px;
+    }
+    .final-request__warning {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+        margin-top: 25px;
+    }
+    .final-request__price {
+        color: #256016;
+        font-size: 13px;
+    }
+    .final-request__price-warning {
+        color: #256016;
+        font-size: 13px;
+        width: 140px;
+    }
+    .final-request__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px;
+        margin-top: 12px;
+    }
+    .final-request__call-button, .final-request__cancel-button {
+        color: #FFF;
+        font-size: 13px;
+        height: 30px;
+    }
+    .final-request__call-button {
+        width: 180px;
+        background: rgba(75, 184, 47, 0.55);
+    }
+    .final-request__cancel-button {
+        background: rgba(37, 96, 22, 0.77);
+        width: 100px;
+    }
+    .final-request__call-button:hover {
+        background: rgba(75, 184, 47, 0.8);
+    }
+    .final-request__cancel-button:hover {
+        background: rgb(37, 96, 22);
+    }
+
+    .blur {
+        filter: blur(3px);
+    }
+
+    .phone-call {
+        width: 501px;
+        border-radius: 10px;
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .phone-call__header {
+        display: flex;
+        justify-content: space-between;
+        width: 463px;
+        align-items: center;
+        margin-top: 11px;
+    }
+    .phone-call__title {
+        color: #4BB82F;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 75px;
+    }
+    .phone-call__close {
+        border: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: none;
+        width: 40px;
+        height: 40px;
+        transition: all 0.1s ease-in;
+        cursor: pointer;
+    }
+    .phone-call__close:hover {
+        scale: 1.1;
+    }
+    .phone-call__form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 307px;
+        margin-top: 40px;
+    }
+    .phone-call__submit {
+        margin-bottom: 40px;
+    }
 }

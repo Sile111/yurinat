@@ -4,8 +4,9 @@ export class DbRequest {
 
     link = 'http://localhost:4545';
 
-    linkDbOne = 'https://my-json-server.typicode.com/Sile111/yurinat-server'
-    linkDbTwo = 'https://my-json-server.typicode.com/Sile111/yurinat-server2'
+    linkDbOne = 'https://my-json-server.typicode.com/Sile111/yurinat-server';
+    linkDbTwo = 'https://my-json-server.typicode.com/Sile111/yurinat-server2';
+
     getNews = async () => {
         return  fetch(`${this.linkDbTwo}/news`).then(res => res.json());
     }
@@ -36,11 +37,31 @@ export class DbRequest {
 
 
     getCost = async () => {
-        return fetch(`${this.linkDbTwo}/metaData`).then(res => res.json());
+        return fetch(`${this.linkDbOne}/metaData`).then(res => res.json());
     }
 
     getDistance = async (latFrom, lonFrom, latTo, lonTo) => {
-        return fetch(`https://geleot.ru/compute/calculationtechnology-de-22.php?formula=Ncoordinate_distance&value1=${latFrom}&value2=${lonFrom}&value3=${latTo}&value4=${lonTo}&roundc=i3&dsp=nozpt&separator=spcheck&history=4&acv=noacvt&angle=grad&mapi=pish&curr=rub`).then(res => res.json());
+            const getDistanceFromLatLonInKm = (lat1,lon1,lat2,lon2) => {
+            let R = 6371; // Radius of the earth in km
+            let dLat = deg2rad(lat2-lat1);  // deg2rad below
+            let dLon = deg2rad(lon2-lon1);
+            let a =
+                Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon/2) * Math.sin(dLon/2)
+            ;
+            let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+            let d = R * c; // Distance in km
+            return d;
+        }
+
+        const deg2rad = (deg) => {
+            return deg * (Math.PI/180)
+        }
+
+        console.log(getDistanceFromLatLonInKm(latFrom, lonFrom, latTo, lonTo))
+
+        return getDistanceFromLatLonInKm(latFrom, lonFrom, latTo, lonTo)
     }
 
     getRequests = async (service) => {
@@ -110,15 +131,15 @@ export class DbRequest {
                     lon: JSON.parse(result).suggestions[0].data.geo_lon,
                 }
 
-                const getDist = (original) => {
-                    let str = original.result;
-                    let arr = str.split('>');
-                    arr = arr[2].split('<')
-                    str = arr[0]
-
-
-                    return Number(str.replace(/\s/g, ""));
-                }
+                // const getDist = (original) => {
+                //     let str = original.result;
+                //     let arr = str.split('>');
+                //     arr = arr[2].split('<')
+                //     str = arr[0]
+                //
+                //
+                //     return Number(str.replace(/\s/g, ""));
+                // }
 
                 if (service === 'request') {
                     const distance = await this.getDistance(coordsFrom.lat, coordsFrom.lon, coordsTo.lat, coordsTo.lon)
@@ -127,12 +148,12 @@ export class DbRequest {
 
                     const cost = await this.getCost();
 
-                    const price = Math.floor(+cost[0].kmCost * getDist(distance));
+                    const price = Math.floor(+cost[0].kmCost * distance);
 
 
                     insert.append(create.createFinalRequest(price === 0 ? 5000 : price));
                     loader.remove();
-                    control.controlRequestFinal(requestItemsArr, service, String(getDist(distance)), itemId);
+                    control.controlRequestFinal(requestItemsArr, service, String(distance), itemId);
                     document.body.style.overflow = 'hidden';
 
                 } else if (service === 'trans') {
@@ -140,11 +161,11 @@ export class DbRequest {
 
                     const cost = await this.getCost();
 
-                    const price = Math.floor((+cost[0].transCost * getDist(await distanceFinal)));
+                    const price = Math.floor((+cost[0].transCost * await distanceFinal));
 
                     insert.append(create.createFinalRequest(price === 0 ? 5000 : price));
                     loader.remove();
-                    control.controlRequestFinal(requestItemsArr, service, getDist(await distanceFinal), itemId);
+                    control.controlRequestFinal(requestItemsArr, service, await distanceFinal, itemId);
                     document.body.style.overflow = 'hidden';
                 }
 
@@ -206,7 +227,7 @@ export class DbRequest {
     }
 
     deleteAdmins = async (id) => {
-        fetch(`${this.linkDbOne}/admins/${id}`, {
+        fetch(`${this.link}/admins/${id}`, {
             method: 'DELETE'
         });
     }

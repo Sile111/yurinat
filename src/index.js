@@ -12,8 +12,10 @@ window.dbRequest = new DbRequest();
 window.regExp = new RegExp();
 window.admin = new Admin();
 
+
 window.addEventListener('load', async () => {
     control.scrollControl();
+    control.burgerControl();
 
     if (window.location.pathname === '/yurinat/news.html') {
         control.modalsControl();

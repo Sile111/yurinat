@@ -397,25 +397,25 @@ export class Create {
         overlay.insertAdjacentHTML('beforeend', `
                  <div class="final-request">
                 <div class="final-request__slider">
-                    <button class="final-request__arrow final-request__arrow_left">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
-                            <ellipse cx="22.8" cy="22.7583" rx="22.8" ry="22.7583" transform="matrix(-1 0 0 1 45.6001 0)" fill="#4BB82F"/>
-                            <path d="M11.5819 24.172C10.8008 23.391 10.8008 22.1246 11.5819 21.3436L24.3098 8.61568C25.0909 7.83463 26.3572 7.83463 27.1382 8.61568C27.9193 9.39673 27.9193 10.6631 27.1382 11.4441L15.8245 22.7578L27.1382 34.0715C27.9193 34.8526 27.9193 36.1189 27.1382 36.8999C26.3572 37.681 25.0909 37.681 24.3098 36.8999L11.5819 24.172ZM15.5041 24.7578H12.9961V20.7578H15.5041V24.7578Z" fill="white"/>
-                        </svg>
-                    </button>
+<!--                    <button class="final-request__arrow final-request__arrow_left">-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">-->
+<!--                            <ellipse cx="22.8" cy="22.7583" rx="22.8" ry="22.7583" transform="matrix(-1 0 0 1 45.6001 0)" fill="#4BB82F"/>-->
+<!--                            <path d="M11.5819 24.172C10.8008 23.391 10.8008 22.1246 11.5819 21.3436L24.3098 8.61568C25.0909 7.83463 26.3572 7.83463 27.1382 8.61568C27.9193 9.39673 27.9193 10.6631 27.1382 11.4441L15.8245 22.7578L27.1382 34.0715C27.9193 34.8526 27.9193 36.1189 27.1382 36.8999C26.3572 37.681 25.0909 37.681 24.3098 36.8999L11.5819 24.172ZM15.5041 24.7578H12.9961V20.7578H15.5041V24.7578Z" fill="white"/>-->
+<!--                        </svg>-->
+<!--                    </button>-->
 
 
-                    <button class="final-request__arrow final-request__arrow_right">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">
-                            <ellipse cx="22.8" cy="22.7583" rx="22.8" ry="22.7583" fill="#4BB82F"/>
-                            <path d="M34.0182 24.172C34.7993 23.391 34.7993 22.1246 34.0182 21.3436L21.2903 8.61568C20.5092 7.83463 19.2429 7.83463 18.4619 8.61568C17.6808 9.39673 17.6808 10.6631 18.4619 11.4441L29.7756 22.7578L18.4619 34.0715C17.6808 34.8526 17.6808 36.1189 18.4619 36.8999C19.2429 37.681 20.5092 37.681 21.2903 36.8999L34.0182 24.172ZM30.096 24.7578H32.604V20.7578H30.096V24.7578Z" fill="white"/>
-                        </svg>
-                    </button>
+<!--                    <button class="final-request__arrow final-request__arrow_right">-->
+<!--                        <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" fill="none">-->
+<!--                            <ellipse cx="22.8" cy="22.7583" rx="22.8" ry="22.7583" fill="#4BB82F"/>-->
+<!--                            <path d="M34.0182 24.172C34.7993 23.391 34.7993 22.1246 34.0182 21.3436L21.2903 8.61568C20.5092 7.83463 19.2429 7.83463 18.4619 8.61568C17.6808 9.39673 17.6808 10.6631 18.4619 11.4441L29.7756 22.7578L18.4619 34.0715C17.6808 34.8526 17.6808 36.1189 18.4619 36.8999C19.2429 37.681 20.5092 37.681 21.2903 36.8999L34.0182 24.172ZM30.096 24.7578H32.604V20.7578H30.096V24.7578Z" fill="white"/>-->
+<!--                        </svg>-->
+<!--                    </button>-->
                 </div>
 
-                <div class="final-request__pages">
-                    <p class="final-request__page">1/4</p>
-                </div>
+<!--                <div class="final-request__pages">-->
+<!--                    <p class="final-request__page">1/4</p>-->
+<!--                </div>-->
 
                 <div class="final-request__bottom">
                     <section class="final-request__warning">
@@ -908,6 +908,37 @@ export class Create {
             <img src="img/images/${img}" alt="brands" class="brand__img">
         </div>
     </div>
+        `);
+        return overlay;
+    }
+
+    createMenu = () => {
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        overlay.insertAdjacentHTML('beforeend', `
+                <div class="menu">
+                <button class="menu__close"></button>
+                <nav class="header__nav">
+                    <ul class="header__nav-list header__nav-list_burger">
+                        <li class="header__nav-item">
+                            <a href="index.html" class="header__nav-link">О компании</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="calc.html" class="header__nav-link">Калькулятор</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="news.html" class="header__nav-link">Новости</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#contacts" class="header__nav-link header__nav-link_contacts">Контакты</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="calc.html" class="header__nav-link">Заказать услугу</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         `);
         return overlay;
     }

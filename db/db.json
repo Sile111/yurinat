@@ -22,7 +22,7 @@
       "comment": "упц",
       "service": "request",
       "surname": "Синяев",
-      "name": "Свят",
+      "name": "Святл",
       "phone": "89291231212",
       "column": "one"
     },
@@ -58,7 +58,7 @@
     {
       "company": "ООО юр лицов",
       "type": "Кондитерская продукция",
-      "phone": "89991232327",
+      "phone": "89991232325",
       "email": "sss@mail.ru",
       "inn": "1141444",
       "comment": "wgwgwg",
@@ -66,29 +66,37 @@
       "service": "partner",
       "id": 1
     }
-  ],"news": [
-  {
-    "id": 1,
-    "image": "news-img.png",
-    "title": "Открыты новые складские помещения",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dolorum ducimus eius fugiat in iste magni, minima modi molestiae neque, officia perferendis repellendus similique sint voluptates voluptatum? Ad adipisci cum dicta ex exercitationem illo impedit laboriosam, laborum magnam maiores maxime nam nisi perspiciatis quia quod rerum saepe voluptate. A architecto consectetur consequatur corporis dolores eligendi est facere fuga id ipsa magni, maxime natus nesciunt perferendis porro recusandae veritatis vero? Iusto, perferendis, rerum! Doloremque dolores ea, earum iste nam neque odio perspiciatis? Alias aspernatur aut commodi debitis deserunt doloremque eos, error in officia praesentium quam quis quo repellendus, tempore tenetur veritatis voluptas! Accusantium animi aspernatur autem delectus deleniti deserunt dicta dolorem eligendi exercitationem explicabo facilis fugiat inventore ipsum itaque, laboriosam magnam molestias non nostrum obcaecati odit officiis omnis quaerat quasi quidem quos, repellendus suscipit tempora tenetur, vitae voluptatum. Ad adipisci, amet animi assumenda atque consequatur dignissimos dolorum ducimus, eligendi eos est eveniet expedita facilis fuga fugiat ipsam libero nesciunt nisi nulla optio placeat porro quasi repudiandae similique, sit suscipit tenetur totam unde veniam voluptatem! Deserunt est, explicabo impedit iusto mollitia possimus repellat sunt. Alias aperiam architecto asperiores commodi dicta dignissimos, et libero molestiae, mollitia nemo officia quisquam ratione reiciendis! Animi cupiditate deserunt eaque, eum explicabo illo laudantium provident sint, sit sunt ullam voluptatum. A adipisci alias aliquid aperiam culpa debitis, dolore ea enim ex harum id itaque maiores natus necessitatibus obcaecati pariatur perspiciatis quod reprehenderit sapiente tempore temporibus tenetur velit. Adipisci deleniti dolor eaque inventore laboriosam maiores maxime, placeat praesentium, quidem quo sequi similique temporibus voluptatum.",
-    "date": "12.12.2022"
-  },
-  {
-    "id": 2,
-    "image": "news-img.png",
-    "title": "ские помещения",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dolorum ducimus eius fugiat in iste magni, minima modi molestiae neque, officia perferendis repellendus similique sint voluptates voluptatum? Ad adipisci cum dicta ex exercitationem illo impedit laboriosam, laborum magnam maiores maxime nam nisi perspiciatis quia quod rerum saepe voluptate. A architecto consectetur consequatur corporis dolores eligendi est facere fuga id ipsa magni, maxime natus nesciunt perferendis porro recusandae veritatis vero? Iusto, perferendis, rerum! Doloremque dolores ea, earum iste nam neque odio perspiciatis? Alias aspernatur aut commodi debitis deserunt doloremque eos, error in officia praesentium quam quis quo repellendus, tempore tenetur veritatis voluptas! Accusantium animi aspernatur autem delectus deleniti deserunt dicta dolorem eligendi exercitationem explicabo facilis fugiat inventore ipsum itaque, laboriosam magnam molestias non nostrum obcaecati odit officiis omnis quaerat quasi quidem quos, repellendus suscipit tempora tenetur, vitae voluptatum. Ad adipisci, amet animi assumenda atque consequatur dignissimos dolorum ducimus, eligendi eos est eveniet expedita facilis fuga fugiat ipsam libero nesciunt nisi nulla optio placeat porro quasi repudiandae similique, sit suscipit tenetur totam unde veniam voluptatem! Deserunt est, explicabo impedit iusto mollitia possimus repellat sunt. Alias aperiam architecto asperiores commodi dicta dignissimos, et libero molestiae, mollitia nemo officia quisquam ratione reiciendis! Animi cupiditate deserunt eaque, eum explicabo illo laudantium provident sint, sit sunt ullam voluptatum. A adipisci alias aliquid aperiam culpa debitis, dolore ea enim ex harum id itaque maiores natus necessitatibus obcaecati pariatur perspiciatis quod reprehenderit sapiente tempore temporibus tenetur velit. Adipisci deleniti dolor eaque inventore laboriosam maiores maxime, placeat praesentium, quidem quo sequi similique temporibus voluptatum.",
-    "date": "12.12.2022"
-  },
-  {
-    "title": "wfwf",
-    "text": "wfwffw",
-    "image": "WIN_20230321_12_46_30_Pro.jpg",
-    "date": "12.11.2023",
-    "id": 4
-  }
-],
+  ],
+  "news": [
+    {
+      "id": 1,
+      "image": "news-img.png",
+      "title": "Открыты новые складские помещения",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dolorum ducimus eius fugiat in iste magni, minima modi molestiae neque, officia perferendis repellendus similique sint voluptates voluptatum? Ad adipisci cum dicta ex exercitationem illo impedit laboriosam, laborum magnam maiores maxime nam nisi perspiciatis quia quod rerum saepe voluptate. A architecto consectetur consequatur corporis dolores eligendi est facere fuga id ipsa magni, maxime natus nesciunt perferendis porro recusandae veritatis vero? Iusto, perferendis, rerum! Doloremque dolores ea, earum iste nam neque odio perspiciatis? Alias aspernatur aut commodi debitis deserunt doloremque eos, error in officia praesentium quam quis quo repellendus, tempore tenetur veritatis voluptas! Accusantium animi aspernatur autem delectus deleniti deserunt dicta dolorem eligendi exercitationem explicabo facilis fugiat inventore ipsum itaque, laboriosam magnam molestias non nostrum obcaecati odit officiis omnis quaerat quasi quidem quos, repellendus suscipit tempora tenetur, vitae voluptatum. Ad adipisci, amet animi assumenda atque consequatur dignissimos dolorum ducimus, eligendi eos est eveniet expedita facilis fuga fugiat ipsam libero nesciunt nisi nulla optio placeat porro quasi repudiandae similique, sit suscipit tenetur totam unde veniam voluptatem! Deserunt est, explicabo impedit iusto mollitia possimus repellat sunt. Alias aperiam architecto asperiores commodi dicta dignissimos, et libero molestiae, mollitia nemo officia quisquam ratione reiciendis! Animi cupiditate deserunt eaque, eum explicabo illo laudantium provident sint, sit sunt ullam voluptatum. A adipisci alias aliquid aperiam culpa debitis, dolore ea enim ex harum id itaque maiores natus necessitatibus obcaecati pariatur perspiciatis quod reprehenderit sapiente tempore temporibus tenetur velit. Adipisci deleniti dolor eaque inventore laboriosam maiores maxime, placeat praesentium, quidem quo sequi similique temporibus voluptatum.",
+      "date": "12.12.2022"
+    },
+    {
+      "id": 2,
+      "image": "news-img.png",
+      "title": "ские помещения",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium delectus dolorum ducimus eius fugiat in iste magni, minima modi molestiae neque, officia perferendis repellendus similique sint voluptates voluptatum? Ad adipisci cum dicta ex exercitationem illo impedit laboriosam, laborum magnam maiores maxime nam nisi perspiciatis quia quod rerum saepe voluptate. A architecto consectetur consequatur corporis dolores eligendi est facere fuga id ipsa magni, maxime natus nesciunt perferendis porro recusandae veritatis vero? Iusto, perferendis, rerum! Doloremque dolores ea, earum iste nam neque odio perspiciatis? Alias aspernatur aut commodi debitis deserunt doloremque eos, error in officia praesentium quam quis quo repellendus, tempore tenetur veritatis voluptas! Accusantium animi aspernatur autem delectus deleniti deserunt dicta dolorem eligendi exercitationem explicabo facilis fugiat inventore ipsum itaque, laboriosam magnam molestias non nostrum obcaecati odit officiis omnis quaerat quasi quidem quos, repellendus suscipit tempora tenetur, vitae voluptatum. Ad adipisci, amet animi assumenda atque consequatur dignissimos dolorum ducimus, eligendi eos est eveniet expedita facilis fuga fugiat ipsam libero nesciunt nisi nulla optio placeat porro quasi repudiandae similique, sit suscipit tenetur totam unde veniam voluptatem! Deserunt est, explicabo impedit iusto mollitia possimus repellat sunt. Alias aperiam architecto asperiores commodi dicta dignissimos, et libero molestiae, mollitia nemo officia quisquam ratione reiciendis! Animi cupiditate deserunt eaque, eum explicabo illo laudantium provident sint, sit sunt ullam voluptatum. A adipisci alias aliquid aperiam culpa debitis, dolore ea enim ex harum id itaque maiores natus necessitatibus obcaecati pariatur perspiciatis quod reprehenderit sapiente tempore temporibus tenetur velit. Adipisci deleniti dolor eaque inventore laboriosam maiores maxime, placeat praesentium, quidem quo sequi similique temporibus voluptatum.",
+      "date": "12.12.2022"
+    },
+    {
+      "title": "wfwf",
+      "text": "wfwffw",
+      "image": "WIN_20230321_12_46_30_Pro.jpg",
+      "date": "12.11.2023",
+      "id": 4
+    },
+    {
+      "title": "ууууууу",
+      "text": "уп3п у  уппу п пуп пп уп  п ",
+      "image": "news-img.png",
+      "date": "13.11.2023",
+      "id": 5
+    }
+  ],
   "metaData": [
     {
       "id": 1,

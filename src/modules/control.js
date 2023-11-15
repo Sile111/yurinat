@@ -257,7 +257,11 @@ export class Control {
             requestForm.reset();
             modal.remove();
 
-            controlCalcRender();
+
+            container.append(create.createCalcButtons('yes'));
+            this.controlCalcButtons(requestItemsArr, itemId, service, 'yes');
+            //
+            // controlCalcRender();
         });
     }
 
@@ -317,28 +321,28 @@ export class Control {
 
     controlRequestFinal = (requestItemsArr, service, distance, itemId) => {
         const sliderContainer = document.querySelector('.final-request__slider');
-        const leftArrow = document.querySelector('.final-request__arrow_left');
-        const rightArrow = document.querySelector('.final-request__arrow_right');
+        // const leftArrow = document.querySelector('.final-request__arrow_left');
+        // const rightArrow = document.querySelector('.final-request__arrow_right');
         const cancelButton = document.querySelector('.final-request__cancel-button');
         const overlay = document.querySelector('.overlay');
         const phoneCall = document.querySelector('.final-request__call-button');
-        const page = document.querySelector('.final-request__page');
+        // const page = document.querySelector('.final-request__page');
         const container = document.querySelector('.container');
 
         const firstItem = requestItemsArr[0];
-        let currentPage = 1;
-        let maxPage = requestItemsArr.length;
+        // let currentPage = 1;
+        // let maxPage = requestItemsArr.length;
 
         const insertSlide = (item) => {
             if (service === 'request') {
-                sliderContainer.insertBefore(create.createFinalSlide(item.country, item.type,
-                    item.amount, item.index, item.comment), rightArrow);
+                sliderContainer.append(create.createFinalSlide(item.country, item.type,
+                    item.amount, item.index, item.comment));
             } else if (service === 'trans') {
-                sliderContainer.insertBefore(create.createFinaSlideTrans(item.indexFrom, item.indexTo, item.size,
-                    item.weight), rightArrow);
+                sliderContainer.append(create.createFinaSlideTrans(item.indexFrom, item.indexTo, item.size,
+                    item.weight));
             }
 
-            page.textContent = `${currentPage}/${requestItemsArr.length}`
+            // page.textContent = `${currentPage}/${requestItemsArr.length}`
         }
 
         insertSlide(firstItem);
@@ -351,37 +355,37 @@ export class Control {
             overlay.remove();
         });
 
-        rightArrow.addEventListener('click', e => {
-            if (currentPage < maxPage) {
-                currentPage++;
-                sliderContainer.children[1].remove();
-
-                insertSlide(requestItemsArr[currentPage - 1]);
-                const slide = document.querySelector('.final-request__slide-container');
-
-                slide.classList.add('blur');
-
-                setTimeout(() => {
-                    slide.classList.remove('blur');
-                }, 250)
-            }
-        });
-
-        leftArrow.addEventListener('click', e => {
-            if (currentPage > 1) {
-                currentPage--;
-                sliderContainer.children[1].remove();
-
-                insertSlide(requestItemsArr[currentPage - 1]);
-                const slide = document.querySelector('.final-request__slide-container');
-
-                slide.classList.add('blur');
-
-                setTimeout(() => {
-                    slide.classList.remove('blur');
-                }, 250)
-            }
-        });
+        // rightArrow.addEventListener('click', e => {
+        //     if (currentPage < maxPage) {
+        //         currentPage++;
+        //         sliderContainer.children[1].remove();
+        //
+        //         insertSlide(requestItemsArr[currentPage - 1]);
+        //         const slide = document.querySelector('.final-request__slide-container');
+        //
+        //         slide.classList.add('blur');
+        //
+        //         setTimeout(() => {
+        //             slide.classList.remove('blur');
+        //         }, 250)
+        //     }
+        // });
+        //
+        // leftArrow.addEventListener('click', e => {
+        //     if (currentPage > 1) {
+        //         currentPage--;
+        //         sliderContainer.children[1].remove();
+        //
+        //         insertSlide(requestItemsArr[currentPage - 1]);
+        //         const slide = document.querySelector('.final-request__slide-container');
+        //
+        //         slide.classList.add('blur');
+        //
+        //         setTimeout(() => {
+        //             slide.classList.remove('blur');
+        //         }, 250)
+        //     }
+        // });
 
         phoneCall.addEventListener('click', e => {
             e.preventDefault();
@@ -1139,7 +1143,47 @@ export class Control {
             e.preventDefault();
             document.body.style.overflow = 'visible'
             overlay.remove();
-        })
+        });
+
+    }
+
+
+    burgerControl = () => {
+        if (window.innerWidth < 1024) {
+            const header = document.querySelector('.header__container');
+            const container = document.querySelector('.container');
+
+            const partnerBtn = document.createElement('button');
+            partnerBtn.classList.add('partner-btn');
+            partnerBtn.classList.add('partner-btn');
+            partnerBtn.classList.add('header__partner-btn_burger');
+            partnerBtn.innerText = 'Стать партнером';
+            partnerBtn.classList.add('btn');
+            header.prepend(partnerBtn);
+
+            const burger = document.createElement('button');
+            burger.classList.add('burger');
+
+            header.prepend(burger);
+
+            burger.addEventListener('click', e => {
+                const menu = create.createMenu()
+                container.append(menu);
+                document.querySelector('.menu').classList.add('visible');
+                document.body.style.overflow = 'hidden';
+
+                const close = document.querySelector('.menu__close');
+                close.addEventListener('click', e => {
+                    document.querySelector('.overlay').remove();
+                    document.body.style.overflow = 'visible';
+                });
+
+                document.querySelector('.header__nav-link_contacts').addEventListener('click', e => {
+                    document.querySelector('.overlay').remove();
+                    document.body.style.overflow = 'visible';
+                })
+            })
+        }
     }
 }
 
